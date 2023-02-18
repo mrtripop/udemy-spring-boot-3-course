@@ -1,4 +1,4 @@
-package com.spring.udemyspringframework.config;
+package com.spring.udemy.config;
 
 import javax.persistence.EntityManagerFactory;
 

@@ -1,4 +1,4 @@
-package com.spring.udemyspringframework;
+package com.spring.udemy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan(basePackages = "com.spring.*")
 @EntityScan("com.spring.*")
-public class UdemySpringFrameworkApplication {
+public class UdemyApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UdemySpringFrameworkApplication.class, args);
+		SpringApplication.run(UdemyApplication.class, args);
 	}
 
 }

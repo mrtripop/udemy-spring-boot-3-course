@@ -1,10 +1,10 @@
-package com.spring.udemyspringframework.interfaces;
+package com.spring.udemy.interfaces;
 
 import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.spring.udemyspringframework.model.Course;
+import com.spring.udemy.model.Course;
 
 @Component
 public interface ICourse {

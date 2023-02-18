@@ -1,4 +1,4 @@
-package com.spring.udemyspringframework.service;
+package com.spring.udemy.service;
 
 // import org.junit.jupiter.api.Test;
 

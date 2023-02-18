@@ -1,10 +1,10 @@
-package com.spring.udemyspringframework.service;
+package com.spring.udemy.service;
 
 import java.util.List;
 import javax.transaction.Transactional;
 
-import com.spring.udemyspringframework.interfaces.ICourse;
-import com.spring.udemyspringframework.model.Course;
+import com.spring.udemy.interfaces.ICourse;
+import com.spring.udemy.model.Course;
 
 import org.hibernate.Session;
 import org.slf4j.Logger;

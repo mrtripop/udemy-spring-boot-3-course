@@ -1,4 +1,4 @@
-package com.spring.udemyspringframework.controller;
+package com.spring.udemy.controller;
 
 import java.util.List;
 
@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.spring.udemyspringframework.interfaces.ICourse;
-import com.spring.udemyspringframework.model.Course;
-import com.spring.udemyspringframework.service.CourseService;
+import com.spring.udemy.interfaces.ICourse;
+import com.spring.udemy.model.Course;
+import com.spring.udemy.service.CourseService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;

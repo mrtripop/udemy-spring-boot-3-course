@@ -1,4 +1,4 @@
-package com.spring.udemyspringframework.model;
+package com.spring.udemy.model;
 
 import java.io.Serializable;
 
