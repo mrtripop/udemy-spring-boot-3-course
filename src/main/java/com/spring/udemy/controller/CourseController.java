@@ -3,50 +3,49 @@ package com.spring.udemy.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.spring.udemy.interfaces.ICourse;
 import com.spring.udemy.model.Course;
 import com.spring.udemy.service.CourseService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
+@RequestMapping("/course")
 public class CourseController implements ICourse {
 
-    @Autowired
     private CourseService courseService;
 
+    @Autowired
+    public CourseController(CourseService courseService) {
+        this.courseService = courseService;
+    }
+
     @Override
-    @GetMapping("/course")
+    @GetMapping
     public List<Course> getAll() {
         return courseService.getAll();
     }
 
     @Override
-    @GetMapping("/course/{id}")
+    @GetMapping("{id}")
     public Course getById(@PathVariable("id") int id) {
         return courseService.getById(id);
     }
 
     @Override
-    @PostMapping("/course/save")
+    @PostMapping
     public Course save(@RequestBody Course course) {
         return courseService.save(course);
     }
 
     @Override
-    @PutMapping("/course/update")
+    @PutMapping
     public Course update(@RequestBody Course course) {
         return courseService.update(course);
     }
 
     @Override
-    @DeleteMapping("/course/delete")
+    @DeleteMapping
     public Course delete(@RequestBody Course course) {
         return courseService.delete(course);
     }
