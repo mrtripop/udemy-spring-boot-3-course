@@ -1,4 +1,4 @@
-package com.spring.udemyspringframework.pojo;
+package com.spring.udemyspringframework.model;
 
 import java.io.Serializable;
 

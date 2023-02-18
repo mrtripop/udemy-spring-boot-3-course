@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.udemyspringframework.interfaces.ICourse;
-import com.spring.udemyspringframework.pojo.Course;
+import com.spring.udemyspringframework.model.Course;
 import com.spring.udemyspringframework.service.CourseService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;

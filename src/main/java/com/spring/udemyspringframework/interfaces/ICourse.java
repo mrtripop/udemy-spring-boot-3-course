@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.spring.udemyspringframework.pojo.Course;
+import com.spring.udemyspringframework.model.Course;
 
 @Component
 public interface ICourse {

@@ -4,7 +4,7 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import com.spring.udemyspringframework.interfaces.ICourse;
-import com.spring.udemyspringframework.pojo.Course;
+import com.spring.udemyspringframework.model.Course;
 
 import org.hibernate.Session;
 import org.slf4j.Logger;
