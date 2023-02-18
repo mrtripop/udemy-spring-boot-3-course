@@ -9,13 +9,13 @@ import com.spring.udemy.model.Course;
 @Component
 public interface ICourse {
 
-    public List<Course> getAll();
+    List<Course> getAll();
 
-    public Course getById(int id);
+    Course getById(int id);
 
-    public Course save(Course course);
+    Course save(Course course);
 
-    public Course update(Course course);
+    Course update(Course course);
 
-    public Course delete(Course course);
+    Course delete(Course course);
 }
