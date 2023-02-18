@@ -1,22 +1,20 @@
 package com.spring.udemy.service;
 
-import java.util.List;
-import javax.transaction.Transactional;
-
 import com.spring.udemy.interfaces.ICourse;
 import com.spring.udemy.model.Course;
-
+import lombok.extern.slf4j.Slf4j;
 import org.hibernate.Session;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+import java.util.List;
+
 @Service
+@Slf4j
 public class CourseService implements ICourse {
-    private static Logger logger = LoggerFactory.getLogger(CourseService.class);
     private static final Marker IMPORTANT_MARKER = MarkerFactory.getMarker("IMPORTANT");
 
     @Autowired
@@ -30,7 +28,7 @@ public class CourseService implements ICourse {
                     .getResultList();
             return response;
         } catch (Exception error) {
-            logger.error("[get-all] ", error);
+            log.error("[get-all] ", error);
             return null;
         }
     }
@@ -38,12 +36,12 @@ public class CourseService implements ICourse {
     @Override
     @Transactional
     public Course getById(int id) {
-        logger.info(String.valueOf(id));
+        log.info(String.valueOf(id));
         try {
             Course response = session.find(Course.class, id);
             return response;
         } catch (IllegalArgumentException error) {
-            logger.error("[get-by-id]", error);
+            log.error("[get-by-id]", error);
             return null;
         }
     }
@@ -55,7 +53,7 @@ public class CourseService implements ICourse {
             session.save(course);
             return course;
         } catch (Exception error) {
-            logger.error(IMPORTANT_MARKER, "[save] -> ", error);
+            log.error(IMPORTANT_MARKER, "[save] -> ", error);
             return null;
         }
     }
@@ -67,7 +65,7 @@ public class CourseService implements ICourse {
             session.merge(course);
             return course;
         } catch (Exception error) {
-            logger.error("[update] ", error);
+            log.error("[update] ", error);
             return null;
         }
     }
@@ -76,8 +74,8 @@ public class CourseService implements ICourse {
     @Transactional
     public Course delete(Course course) {
         try {
-            logger.info(course.toString());
-            logger.info(String.valueOf(session.contains(course)));
+            log.info(course.toString());
+            log.info(String.valueOf(session.contains(course)));
             if (session.contains(course)) {
                 session.remove(course);
                 return course;
@@ -87,7 +85,7 @@ public class CourseService implements ICourse {
                 return null;
             }
         } catch (Exception error) {
-            logger.error("[delete] ", error);
+            log.error("[delete] ", error);
             return null;
         }
     }
