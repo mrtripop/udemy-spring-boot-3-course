@@ -1,5 +1,9 @@
 package com.spring.udemy.model;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 import java.io.Serializable;
 
 import javax.persistence.Column;
@@ -9,6 +13,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+@Getter
+@Setter
+@ToString
 public class Course implements Serializable {
 
     @Id
@@ -20,33 +27,5 @@ public class Course implements Serializable {
 
     @Column(name = "author")
     private String author;
-
-    public Course() {
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    @Override
-    public String toString() {
-        return "Course [author=" + author + ", id=" + id + ", name=" + name + "]";
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
 
 }
