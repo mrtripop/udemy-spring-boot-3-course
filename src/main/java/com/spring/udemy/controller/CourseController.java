@@ -10,7 +10,7 @@ import com.spring.udemy.model.Course;
 import com.spring.udemy.service.CourseService;
 
 @RestController
-@RequestMapping("/course")
+@RequestMapping("/courses")
 public class CourseController implements ICourse {
 
     private CourseService courseService;
